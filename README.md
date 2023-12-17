@@ -12,3 +12,6 @@ Custom Yocto layer for the Raspberry Pi 4.
 # TODO's
 
 - Remove uneccessary pi software like the python
+- After install move image to /artifacts
+- Investigate BusyBox
+- Pi-Hole
