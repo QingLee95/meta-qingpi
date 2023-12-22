@@ -1,17 +1,22 @@
 # Own custom meta layer
-Custom Yocto layer for the Raspberry Pi 4.
+For playing and testing.
 
-- Static ip on eth0 (192.168.1.2/24)
-- OpenSSH with root login and empty password
-- .sdimg
+Custom Yocto layer for the Raspberry Pi 4B and (later) Raspberry Pi Zero 2W.
 
-# Dependencies
+Current features:
+
+- Static ip on eth0 (192.168.1.3/24)
+- SSH with root login and empty password
+- .sdimg image
+- Serial communication enabled
+
+## Dependencies
 
 - meta-raspberrypi
 
-# TODO's
+## TODO's
 
-- Remove uneccessary pi software like the python
+- Change openSSH for DropBear
 - After install move image to /artifacts
 - Investigate BusyBox
 - Pi-Hole
