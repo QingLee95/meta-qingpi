@@ -18,8 +18,18 @@ Current features:
 
 ## TODO's
 
-- Change openSSH for DropBear
+Raspberry Pi 4B
+
 - After install move image to /artifacts
 - Replace BusyBox by CoreUtils
+- Enable by default wifi connection
 - Add libgpiod
-- Pi-Hole
+- Change SysLog for Journalctl
+- Pi-Hole (Depends on wifi)
+- Change SysInit for SystemD 
+
+Raspberry Pi 2W zero
+
+- Busybox
+- SysInit for Busybox init
+- glibc for musl c
