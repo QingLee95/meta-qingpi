@@ -9,6 +9,8 @@ Current features:
 - SSH with root login and empty password
 - .sdimg image
 - Serial communication enabled
+- No Avahi
+- No Python lib for hardware access
 
 ## Dependencies
 
@@ -18,5 +20,6 @@ Current features:
 
 - Change openSSH for DropBear
 - After install move image to /artifacts
-- Investigate BusyBox
+- Replace BusyBox by CoreUtils
+- Add libgpiod
 - Pi-Hole
