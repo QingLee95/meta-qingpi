@@ -1,7 +1,9 @@
-# Own custom meta layer
+# TinyQ minimal lightweight custom embedded linux distro
 For playing and testing.
 
-Custom Yocto layer for the Raspberry Pi 4B and (later) Raspberry Pi Zero 2W.
+Custom Yocto layer (meta-tinyqpi) for the Raspberry Pi 4B and (later) Raspberry Pi Zero 2W.
+
+Yocto version: **Kirkstone**
 
 Current features:
 
@@ -15,20 +17,47 @@ Current features:
 
 ## Dependencies
 
+- poky
+- meta-openembedded
 - meta-raspberrypi
+
+*Do not change these submodules!
 
 ## TODO's
 
 - After install move image to /artifacts
 - SysV init for Busybox init
+- Use Poky-tiny
+- Use core-image-minimal and build up from there (basic feature won't work anymore)
 - Add libgpiod
-- Change SysLog for Journalctl
-- Pi-Hole (Depends on wifi)
+- Strip Kernel
 
+# How to build image
+
+1. Pull repository -> structure of directory should be
+    ```bash
+    .
+    ├── artifacts
+    ├── build
+    └── sources
+        ├── activate_bb
+        ├── meta-openembedded
+        ├── meta-raspberrypi
+        ├── meta-tinyqpi
+        ├── poky
+        └── README.md
+   ```
+2. ```git submodule update --init --recursive``` in ./sources
+3. ```source sources/activate_bb build``` in ./
+4. ```bitbake tinyqpi4b```  in ./build
+
+Step 4 can take a few hours!
+
+The image will be in **./artifacts/*.sdimg** flash it to a sdcard of ssd and insert in the Raspberry Pi.
 
 # Static ip on eth0
 
-Add following line to **local.conf** when building image
+Add following line to **./build/conf/local.conf** when building image
 
 ```
 DISTROOVERRIDE:append = ":static_eth0"
@@ -36,7 +65,7 @@ DISTROOVERRIDE:append = ":static_eth0"
 After this the raspberry pi will be accessible on eth0 via the static ip 192.168.1.3/24.
 
 # Configured wifi out of the box on wlan0
-Add following line to **local.conf** when building image
+Add following line to **./build/conf/local.conf** when building image
 
 ```
 DISTROOVERRIDES:append = ":configured_wifi"
