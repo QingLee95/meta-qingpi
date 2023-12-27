@@ -26,7 +26,9 @@ Current features:
 ## TODO's
 
 - After install move image to /artifacts
-- SysV init for Busybox init
+- Add Swap partition
+- Reduce reserved space in ext4
+- Reduces tmpfs
 - Use Poky-tiny
 - Use core-image-minimal and build up from there (basic feature won't work anymore)
 - Add libgpiod
