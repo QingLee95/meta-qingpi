@@ -5,16 +5,6 @@ Custom Yocto layer (meta-tinyqpi) for the Raspberry Pi 4B and (later) Raspberry 
 
 Yocto version: **Kirkstone**
 
-Current features:
-
-- Static ip on eth0 (192.168.1.3/24)
-- Already working wifi possible
-- SSH with root login and empty password
-- .sdimg image
-- Serial communication enabled
-- No Avahi
-- No Python lib for hardware access
-
 ## Dependencies
 
 - poky
@@ -26,7 +16,6 @@ Current features:
 ## TODO's
 
 - After install move image to /artifacts
-- Add Swap partition
 - Reduce reserved space in ext4
 - Reduces tmpfs
 - Use Poky-tiny
@@ -78,3 +67,12 @@ WIFI_PWD = ""
 ```
 
 The Raspberry pi will startup with wifi already connected.
+
+# Create SD image with swap partition
+
+```
+source sources/activate_bb 
+
+wic create sdimage-tinyqpi -e tinyqpi4b
+```
+This will create a root partition + swap partition of 3GB. If you like to change the size see meta-tinyqpi/wic/sdimage-tiyqpi.wks
