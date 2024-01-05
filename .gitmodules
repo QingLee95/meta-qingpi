@@ -7,3 +7,6 @@
 [submodule "poky"]
 	path = poky
 	url = https://github.com/yoctoproject/poky.git
+[submodule "meta-hyprlandpi"]
+	path = meta-hyprlandpi
+	url = git@github.com:QingLee95/meta-hyprlandpi.git
