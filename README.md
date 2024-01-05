@@ -3,7 +3,7 @@ For playing and testing.
 
 Custom Yocto layer (meta-tinyqpi) for the Raspberry Pi 4B and (later) Raspberry Pi Zero 2W.
 
-Yocto version: **Kirkstone**
+Yocto version: **Nanbield**
 
 ## Dependencies
 
@@ -81,6 +81,3 @@ This will create a root partition + swap partition of 3GB. If you like to change
 # TinyQPi with Hyprland 
 
 TODO
-
-*Incompatible with Kirkstone. Is bleeding edge
-**Don't merge back to master
