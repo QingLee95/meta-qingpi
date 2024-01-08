@@ -19,6 +19,9 @@
 # This sets the default machine to be qemux86-64 if no other machine is selected:
 MACHINE ?= "raspberrypi4-64"
 
+#https://meta-raspberrypi.readthedocs.io/en/latest/ipcompliance.html#linux-firmware-rpidistro
+LICENSE_FLAGS_ACCEPTED = "synaptics-killswitch"
+
 ENABLE_UART = "1"
 
 # Use busybox init
@@ -27,6 +30,9 @@ VIRTUAL-RUNTIME_dev_manager = "busybox-mdev"
 
 # Remove Avahi daemon (Distro features has to be defined in local.conf)
 DISTRO_FEATURES:remove = "zeroconf"
+
+# Enable Hyprland
+DISTRO_FEATURES:append = " wayland hyprland"
 
 # Enable static ip on eth0
 DISTROOVERRIDES:append = ":static_eth0"
