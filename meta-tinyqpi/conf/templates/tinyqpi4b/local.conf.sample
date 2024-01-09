@@ -35,7 +35,8 @@ DISTRO_FEATURES:remove = "zeroconf"
 DISTRO_FEATURES:append = " wayland hyprland"
 
 # Enable static ip on eth0
-DISTROOVERRIDES:append = ":static_eth0"
+# Hyprland logging to stdout
+DISTROOVERRIDES:append = ":static_eth0:hyprland-log"
 
 # Configured wifi (WIFI_NAME, WIFI_PWD is mandatory)
 #DISTROOVERRIDES:append = ":configured_wifi"
