@@ -13,7 +13,6 @@ IMAGE_INSTALL:append = "\
     pi-blaster \
     connman \
     connman-client \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'hyprland', 'hyprland', '', d)} \
 "
 
 RRECOMMENDS:${PN} = "\

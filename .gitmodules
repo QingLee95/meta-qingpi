@@ -7,6 +7,6 @@
 [submodule "poky"]
 	path = poky
 	url = https://github.com/yoctoproject/poky.git
-[submodule "meta-wayland"]
-	path = meta-wayland
-	url = https://codeberg.org/flk/meta-wayland.git
+[submodule "meta-hyprland_de"]
+	path = meta-hyprland_de
+	url = https://github.com/QingLee95/meta-hyprland_de.git

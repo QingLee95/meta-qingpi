@@ -29,14 +29,11 @@ VIRTUAL-RUNTIME_init_manager = "busybox"
 VIRTUAL-RUNTIME_dev_manager = "busybox-mdev"
 
 # Remove Avahi daemon (Distro features has to be defined in local.conf)
-DISTRO_FEATURES:remove = "zeroconf"
-
-# Enable Hyprland
-DISTRO_FEATURES:append = " wayland hyprland"
+DISTRO_FEATURES:remove = "zeroconf xwayland x11 vulkan"
 
 # Enable static ip on eth0
 # Hyprland logging to stdout
-DISTROOVERRIDES:append = ":static_eth0:hyprland-log"
+DISTROOVERRIDES:append = ":static_eth0:hyprland-debug"
 
 # Configured wifi (WIFI_NAME, WIFI_PWD is mandatory)
 #DISTROOVERRIDES:append = ":configured_wifi"
